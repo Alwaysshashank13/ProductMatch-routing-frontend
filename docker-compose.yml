@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      ARTIFACTS_DIR: /app/artifacts
+      CORS_ORIGINS: http://localhost:8080
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+    ports:
+      - "8000:8000"
+
+  web:
+    build: ./frontend
+    depends_on:
+      - api
+    ports:
+      - "8080:80"

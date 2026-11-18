@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Data and outputs: never commit datasets (especially partner data) or run outputs
+data/raw/*
+data/interim/*
+data/processed/*
+data/sample/*
+artifacts/*
+!**/.gitkeep
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Secrets and local settings
+.env
+*.local
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Build output
+build/
+dist/
+*.tsbuildinfo
